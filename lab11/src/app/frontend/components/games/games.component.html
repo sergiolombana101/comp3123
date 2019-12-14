@@ -1,0 +1,39 @@
+<div class="heading">
+    <div class="text-center">
+        <span>Gamer Lobby</span>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-warning" (click)="logout()">Log-Out</button>
+        <img class="login-icon" src="../assets/img/login-icon.png" height="20vw" width="25vw"> 
+    </div>
+</div>
+<input class="searchInput form-control" [(ngModel)]="searchText" placeholder="Search Text">
+<div class="navbar">
+    <button class="player-section" routerLink="../" >Players</button>
+    <button class="game-section selected-section" routerLink="games" >Games</button>
+</div>
+<div class="container">
+    <table class="table-dark">
+        <thead class="thead-light">
+            <th scope="col">Title</th>
+            <th scope="col">Platform</th>
+            <th scope="col">Genre</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Publisher</th>
+            <th scope="col">Release</th>
+            <th scope="col">Status</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let game of games | searchPipe:searchText">
+                <td>{{ game.Title }}</td>
+                <td>{{ game.Platform }}</td>
+                <td>{{ game.Genre }}</td>
+                <td>{{ game.Rating }}</td>
+                <td>{{ game.Publisher }}</td>
+                <td>{{ game.Release}}</td>
+                <td>{{ game.Status}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

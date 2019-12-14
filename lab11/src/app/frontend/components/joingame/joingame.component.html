@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="text-center">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">{{player.player}}</h4>
+                <p class="card-subtitle mb-2 text-muted">Favorite Game: {{player.favorite_g}}</p>
+                <p class="card-text">Rank: {{player.rank}}</p>
+                <p class="card-text">Score: {{player.score}}</p>
+                <p class="card-text">Time: {{player.time}}</p>
+                <div class="cart-text">
+                    <form [formGroup]="joinForm" (ngSubmit)="join()">
+                        <div *ngIf="games" class="dropdown">
+                            <span>Select a game:  </span>
+                                <select [(ngModel)]="gameDropdown" (change)="selected($event)">
+                                    <option *ngFor="let game of games" [ngValue]="game.Title">{{game.Title}}</option>
+                                </select>
+                                {{gameDropdown | json}}
+                        </div>
+                        <div class="container buttons">
+                            <button type="button" class="btn btn-danger" [routerLink]="['']">Cancel</button> 
+                            <button type="submit" class="btn btn-success">Join</button>
+                        </div>
+                    </form>    
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div>

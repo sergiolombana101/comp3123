@@ -1,0 +1,59 @@
+.text-center span{
+    font-size: 3vw;
+    color:white;
+}
+td{
+    height: 100;
+}
+.text-center{
+    margin-top:5%;
+}
+.table-dark{
+    width: 60vw;
+}
+.container{
+    margin-top:2%;
+    margin-left:15%;
+}
+.func-btn{
+    height:2.2vw;
+    padding-bottom: 3%;
+}
+.thead-light{
+    background-color: rgb(129, 128, 128);
+}
+.heading{
+    margin-top:5%;
+    //margin-bottom:10%;
+}
+.login-icon{
+    margin-left:1%;
+}
+.addp-btn{
+    margin-left:45%;
+    margin-top:2%;
+    margin-bottom: 4%;
+}
+.navbar{
+    position: relative;
+    top:-80%;
+    margin-left:15%;
+    height: 6%;
+    width: 62%;
+    display: flex;
+}
+.player-section, .game-section{
+    height:100%;
+    width:50%;
+    background-color:rgb(151, 136, 47);
+    color: white;
+}
+.selected-section{
+    background-color: rgb(102, 97, 67);
+}
+.searchInput{
+    margin-top:5%;
+    display:block;
+    margin-left:40%;
+    width:25%;
+}

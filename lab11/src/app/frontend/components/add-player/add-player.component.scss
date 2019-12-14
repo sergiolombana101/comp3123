@@ -1,0 +1,46 @@
+.card{
+    margin-top:15%;
+    width:40%;
+    margin-left:30%;
+}
+.buttons{
+    margin-top:4%;
+    .btn-danger{
+        margin-right:2%;
+    }
+}
+.pname{
+    width:40%;
+    margin-left:21%;
+}
+.favgame, .score-div, .time-div,.status-div{
+    margin-top:4%;
+}
+.status-div select{
+    width:40%;
+    margin-left:22%;
+}
+.favgame select{
+    width:40%;
+    margin-left:6%;
+}
+.rank{
+    margin-top:4%;
+}
+.time{
+    width:40%;
+    margin-left:24%;
+    height:4%;
+}
+.score{
+    width:40%;
+    margin-left:22%;
+    height:4%;
+}
+.rankDrop{
+    width:40%;
+    margin-left:23%;
+}
+.card-text{
+    display:flex;
+}

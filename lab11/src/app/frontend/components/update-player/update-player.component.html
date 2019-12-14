@@ -1,0 +1,51 @@
+<div *ngIf="error" class="alert alert-danger" role="alert">{{error}}</div>
+<div class="container">
+    <div class="text-center">
+        <div class="card">
+            <div class="card-body">
+                <form [formGroup]="addPlayerForm" (ngSubmit)="update()">
+                    <div class="card-text">
+                        <span>Player:</span>
+                        <input id="name" value="{{player.player}}" name="name" formControlName="pname" class="form-control pname" type="text">
+                    </div>
+                    <div class="card-text rank">
+                        <label for="name" >Rank: </label>
+                        <select formControlName="rankDrop" class="rankDrop" placeholder="Select game"[(ngModel)]="rankDrop" (change)="selectedR($event)">
+                            <option [ngValue]="1">1</option>
+                            <option [ngValue]="2">2</option>
+                            <option [ngValue]="3">3</option>
+                            <option [ngValue]="4">4</option>
+                        </select>
+                    </div>
+                    <div class="card-text favgame">
+                        <span>Favorite Game:  </span>
+                        <select formControlName="gDrop" (change)="selectedG($event)">
+                            <option *ngFor="let game of games" [ngValue]="game.Title">{{game.Title}}</option>
+                        </select>
+                        {{gameDropdown | json}}
+                    </div>
+                    <div class="card-text score-div">
+                        <span>Score:</span>
+                        <input id="score" value="{{player.score}}" name="score" formControlName="pscore" class="form-control score" type="text">
+                    </div>
+                    <div class="card-text time-div">
+                            <span>Time:</span>
+                            <input id="time" name="time" formControlName="ptime" class="form-control time" type="text">
+                    </div>
+                    <div class="card-text status-div">
+                            <span>Status:  </span>
+                            <select formControlName="statusDrop" (change)="selectedS($event)">
+                                <option value="Available" [ngValue]="Available">Available</option>
+                                <option value="Unavailable" [ngValue]="Unavailable">Unavailable</option>
+                            </select>
+                            {{statusDropdown | json}}
+                    </div>
+                    <div class="container buttons">
+                            <button type="button" class="btn btn-danger" routerLink="back" >Cancel</button> 
+                            <button type="submit" class="btn btn-success">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+.login-box{
+    width: 70%;
+    height:70vh;
+    background-color: white;
+    display: flex;
+}
+.text-center{
+    margin-left:20%;
+    margin-top: 10%;
+}
+body{
+    overflow-y: hidden;
+}
+.form-group{
+    margin-left: 4%;
+    margin-top: 5%;
+}
+label, button{
+    float: left;
+}
+input{
+    width: 80%;
+}
+span{
+    font-family: 'Dubai';
+    font-weight: bold;
+    font-size: 3vw;
+    color: rgb(0, 0, 116);
+}
+.title-div{margin-top:8%;}
+button{margin-left:35%;margin-top:5%;}
+.login-img{
+    width: 25vw;
+    height: 70vh;
+}

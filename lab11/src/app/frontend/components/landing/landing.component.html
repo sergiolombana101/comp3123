@@ -1,0 +1,26 @@
+<app-heading></app-heading>
+<div class="container">
+    <table class="table-dark">
+        <thead class="thead-light">
+            <th scope="col">Player</th>
+            <th scope="col">Rank</th>
+            <th scope="col">Score</th>
+            <th scope="col">Time</th>
+            <th scope="col">Games Played</th>
+            <th scope="col">Status</th>
+            <th scope="col"></th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let player of players">
+                <td>{{ player.Player }}</td>
+                <td>{{ player.Rank }}</td>
+                <td>{{ player.Score }}</td>
+                <td>{{ player.Time }}</td>
+                <td>{{ player.Games_Played }}</td>
+                <td>{{ player.Status }}</td>
+                <td *ngIf="player.Status === 'Available'"><button value="join_btn{{player._id}}" class="btn btn-warning" [routerLink]="['join',player._id]">Join Game</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
